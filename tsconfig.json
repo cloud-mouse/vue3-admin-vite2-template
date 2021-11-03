@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "module": "esNext",
+    "noEmit": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "sourceMap": true,
+    "jsx": "preserve",
+    "types": [
+      "vite/client"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "mock/user.ts", "mock/table.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.scss",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "styles/*.scss",
+    "src/*.ts",
+    "src/*.js", ],
+  "exclude": [
+    "node_modules"
+  ]
+}
