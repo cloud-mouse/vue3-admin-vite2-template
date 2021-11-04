@@ -17,27 +17,6 @@ function hasObj(data: any) {
 // create an axios instance
 const service = axios.create({
   baseURL: import.meta.env.VITE_BASE_API, // BASE_API
-  headers: {
-    'Content-Type': 'application/x-www-form-urlencoded'
-  },
-  // withCredentials: true, // send cookies when cross-domain requests
-   // 修改请求数据
-   transformRequest: [
-    function(data: any) {
-      if (hasObj(data)) {
-        return JSON.stringify(data)
-      }
-      let ret = ''
-      for (const it in data) {
-        // 去除空字符串的请求字段
-        if (data[it] !== '') {
-          if (ret !== '') ret += '&'
-          ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it])
-        }
-      }
-      return ret
-    }
-  ],
   timeout: 5000 // request timeout
 })
 
